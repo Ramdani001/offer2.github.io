@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INKA SPA (@InkaSpaBali) | Holistic Face & Body Massage • Canggu, Bali</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Headings), Nunito (Logo), Plus Jakarta Sans (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Nunito:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        inkaMahogany: '#583732',
+                        inkaMahoganyDark: '#432824',
+                        inkaOlive: '#382605',
+                        inkaOliveDeep: '#261904',
+                        inkaGold: '#E5B84B',
+                        inkaGoldRich: '#D4A437',
+                        inkaGoldMuted: '#C29D4D',
+                        inkaCream: '#F5EBE0',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        rounded: ['Nunito', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #583732;
+            color: #F5EBE0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #261904;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #8C6D2E;
+            border-radius: 9999px;
+        }
+
+        /* Signature Fresha Glowing Purple-Blue Orb */
+        .fresha-orb {
+            background: radial-gradient(circle at 60% 60%, #7C69FF 0%, #5F4DEE 48%, rgba(95, 77, 238, 0.25) 78%, transparent 100%);
+            box-shadow: 0 0 16px rgba(124, 105, 255, 0.65);
+        }
+
+        /* Subtle Botanical Texture & Gold Glow */
+        .hero-backdrop {
+            background-color: #583732;
+            background-image: 
+                radial-gradient(circle at 82% 22%, rgba(229, 184, 75, 0.14) 0%, transparent 48%),
+                radial-gradient(circle at 15% 80%, rgba(38, 25, 4, 0.65) 0%, transparent 55%);
+        }
+
+        .glass-olive {
+            background: rgba(56, 38, 5, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 184, 75, 0.22);
+        }
+
+        .gold-gradient-btn {
+            background: linear-gradient(135deg, #E5B84B 0%, #D4A437 100%);
+            color: #261904;
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .gold-gradient-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(229, 184, 75, 0.32);
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        @keyframes modalPop {
+            0% { opacity: 0; transform: translateY(16px) scale(0.97); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-animate {
+            animation: modalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-inkaGold selection:text-inkaOliveDeep">
+
+    <!-- ===================================================================== -->
+    <!-- 1. STICKY LUXURY NAVIGATION BAR                                       -->
+    <!-- ===================================================================== -->
+    <header class="sticky top-0 z-40 bg-[#482C28]/95 backdrop-blur-md border-b border-inkaGold/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            <!-- Brand Emblem + Name -->
+            <a href="#top" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 sm:w-13 sm:h-13 flex-shrink-0 transition-transform duration-300 group-hover:scale-105">
+                    <!-- Exact Circular Emblem SVG from Reference -->
+                    <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-md">
+                        <circle cx="100" cy="100" r="97" fill="#2A1C03" stroke="#1A1102" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="91" fill="#382605" stroke="#D4A437" stroke-width="3.2"/>
+                        <circle cx="100" cy="100" r="65" fill="#382605" stroke="#D4A437" stroke-width="1.6"/>
+                        <defs>
+                            <path id="navTopArc" d="M 26,100 A 74,74 0 1,1 174,100" />
+                            <path id="navBotArc" d="M 21,103 A 79,79 0 0,0 179,103" />
+                        </defs>
+                        <text fill="#D4A437" font-family="Nunito, sans-serif" font-weight="800" font-size="11.2" letter-spacing="1.35">
+                            <textPath href="#navTopArc" startOffset="50%" text-anchor="middle">HOLISTIC FACE &amp; BODY MASSAGE</textPath>
+                        </text>
+                        <text fill="#D4A437" font-family="Nunito, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.2">
+                            <textPath href="#navBotArc" startOffset="50%" text-anchor="middle">BEAUTY &amp; NAILS</textPath>
+                        </text>
+                        <text x="100" y="93" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">INKA</text>
+                        <text x="100" y="121" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">SPA</text>
+                    </svg>
+                </div>
+                <div>
+                    <span class="block font-rounded font-extrabold text-lg sm:text-xl text-inkaGold tracking-wide leading-none">INKA SPA</span>
+                    <span class="block text-[11px] text-inkaGoldMuted font-medium mt-1">@InkaSpaBali • Canggu</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-inkaCream/85">
+                <a href="#canggu-menu" class="hover:text-inkaGold transition">Canggu Menu</a>
+                <a href="#holistic-healing" class="hover:text-inkaGold transition">Holistic Healing</a>
+                <a href="#guest-rewards" class="hover:text-inkaGold transition">15% VIP Reward</a>
+                <a href="#location" class="hover:text-inkaGold transition">Are You Lost?</a>
+            </nav>
+
+            <!-- Right Actions: WhatsApp + Book Via Fresha -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <button onclick="openWhatsAppModal('Halo Inka Spa Bali! Saya ingin reservasi treatment di Canggu.')"
+                        aria-label="WhatsApp Concierge"
+                        class="w-10 h-10 rounded-full bg-inkaOlive border border-inkaGold/30 hover:border-[#25D366] flex items-center justify-center transition shadow-md">
+                    <svg viewBox="0 0 48 48" class="w-5 h-5">
+                        <path fill="#25D366" d="M24.5 4C13.2 4 4 13.1 4 24.3c0 3.6.9 7.1 2.7 10.2L4 44l9.8-2.6c3 1.6 6.3 2.5 9.7 2.5h.1c11.3 0 20.4-9.1 20.4-20.3C44 13.1 35.8 4 24.5 4zm0 36.5c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-5.8 1.5 1.6-5.6-.4-.6c-1.7-2.7-2.6-5.8-2.6-9 0-9.3 7.6-16.9 16.9-16.9 9.3 0 16.9 7.6 16.9 16.9 0 9.3-7.6 16.5-17.3 16.5z"/>
+                        <path fill="#25D366" d="M33.8 28.4c-.5-.3-3-1.5-3.5-1.6-.5-.2-.8-.3-1.1.3-.3.5-1.3 1.6-1.6 2-.3.3-.6.4-1.1.1-.5-.3-2.1-.8-4.1-2.5-1.5-1.3-2.5-3-2.8-3.5-.3-.5 0-.8.2-1 .2-.2.5-.6.8-.9.3-.3.3-.5.5-.8.2-.3.1-.6 0-.9-.1-.3-1.1-2.7-1.5-3.7-.4-1-.8-.8-1.1-.8h-1c-.3 0-.9.1-1.4.6-.5.5-1.8 1.8-1.8 4.3s1.8 5 2.1 5.3c.3.3 3.6 5.5 8.7 7.7 1.2.5 2.2.8 2.9 1.1 1.2.4 2.3.3 3.2.2 1-.1 3-1.2 3.4-2.4.4-1.2.4-2.2.3-2.4-.1-.2-.5-.3-1-.6z"/>
+                    </svg>
+                </button>
+
+                <a href="#booking-section"
+                   class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full bg-inkaOlive hover:bg-inkaOliveDeep border border-inkaGold/50 text-inkaGold font-rounded font-extrabold text-xs sm:text-sm shadow-lg transition">
+                    <span class="w-3.5 h-3.5 rounded-full fresha-orb inline-block"></span>
+                    <span>Book Via Fresha</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- 2. HERO SECTION — SANCTUARY OF HOLISTIC RENEWAL                       -->
+    <!-- ===================================================================== -->
+    <section id="top" class="hero-backdrop relative pt-12 pb-20 sm:pt-16 sm:pb-28 border-b border-inkaGold/15 overflow-hidden">
+        <!-- Decorative Botanical Gold SVG Watermark -->
+        <svg class="absolute -right-24 top-8 w-[420px] h-[420px] text-inkaGold/[0.05] pointer-events-none" viewBox="0 0 200 200" fill="currentColor">
+            <path d="M100,10 C130,50 170,70 190,100 C150,115 125,145 100,190 C75,145 50,115 10,100 C30,70 70,50 100,10 Z"/>
+        </svg>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <!-- Left Editorial Copy -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-inkaOlive border border-inkaGold/30 text-inkaGold text-xs font-semibold tracking-wider uppercase">
+                    <span>✦ Canggu's Holistic Sanctuary • @InkaSpaBali</span>
+                </div>
+
+                <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-inkaCream leading-[1.12]">
+                    Holistic Face &amp; Body Massage, <span class="italic text-inkaGold">Beauty &amp; Nails</span> in Canggu
+                </h1>
+
+                <p class="text-sm sm:text-base text-inkaCream/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Step out of the tropical bustle of Canggu into a warm sanctuary of ancient Balinese touch, sculptural Gua Sha facials, Tibetan sound healing, and artisanal nail rituals.
+                </p>
+
+                <!-- Hero CTA Row -->
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+                    <a href="#booking-section"
+                       class="w-full sm:w-auto px-7 py-4 rounded-full bg-inkaOlive hover:bg-inkaOliveDeep border border-inkaGold/60 text-inkaGold font-rounded font-extrabold text-sm sm:text-base flex items-center justify-center gap-3 shadow-xl transition">
+                        <span class="w-5 h-5 rounded-full fresha-orb"></span>
+                        <span>Book Via Fresha</span>
+                    </a>
+
+                    <button onclick="openPdfModal('menu')"
+                            class="w-full sm:w-auto px-7 py-4 rounded-full gold-gradient-btn font-rounded font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-xl">
+                        <span>Inka Spa Canggu Menu (PDF)</span>
+                    </button>
+                </div>
+
+                <!-- Quick Trust Highlights -->
+                <div class="pt-4 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 border-t border-inkaGold/20">
+                    <div>
+                        <span class="block font-serif font-bold text-2xl text-inkaGold">4.9 ★</span>
+                        <span class="text-[11px] text-inkaCream/70">Google &amp; Tripadvisor</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-2xl text-inkaGold">100%</span>
+                        <span class="text-[11px] text-inkaCream/70">Organic Balinese Oils</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-2xl text-inkaGold">15% Off</span>
+                        <span class="text-[11px] text-inkaCream/70">For Guest Reviews</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual Showcase Card with Authentic Circular Emblem -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <!-- Main Luxury Architectural Frame -->
+                    <div class="rounded-[2.25rem] bg-inkaOlive border border-inkaGold/35 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-inkaGold/10 blur-2xl"></div>
+
+                        <!-- Centered Official Circular Logo -->
+                        <div class="w-36 h-36 sm:w-44 sm:h-44 mx-auto mb-5 animate-float">
+                            <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-2xl">
+                                <circle cx="100" cy="100" r="97" fill="#2A1C03" stroke="#1A1102" stroke-width="2"/>
+                                <circle cx="100" cy="100" r="91" fill="#382605" stroke="#D4A437" stroke-width="3.2"/>
+                                <circle cx="100" cy="100" r="65" fill="#382605" stroke="#D4A437" stroke-width="1.6"/>
+                                <defs>
+                                    <path id="heroTopArc" d="M 26,100 A 74,74 0 1,1 174,100" />
+                                    <path id="heroBotArc" d="M 21,103 A 79,79 0 0,0 179,103" />
+                                </defs>
+                                <text fill="#D4A437" font-family="Nunito, sans-serif" font-weight="800" font-size="11.2" letter-spacing="1.35">
+                                    <textPath href="#heroTopArc" startOffset="50%" text-anchor="middle">HOLISTIC FACE &amp; BODY MASSAGE</textPath>
+                                </text>
+                                <text fill="#D4A437" font-family="Nunito, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.2">
+                                    <textPath href="#heroBotArc" startOffset="50%" text-anchor="middle">BEAUTY &amp; NAILS</textPath>
+                                </text>
+                                <text x="100" y="93" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">INKA</text>
+                                <text x="100" y="121" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">SPA</text>
+                            </svg>
+                        </div>
+
+                        <div class="text-center space-y-2 mb-6">
+                            <h2 class="font-rounded font-extrabold text-xl text-inkaGold">@InkaSpaBali</h2>
+                            <p class="text-xs text-inkaCream/75">Open Daily • 09:00 AM – 09:00 PM WITA • Canggu, Bali</p>
+                        </div>
+
+                        <!-- Quick Feature Pills inside Showcase Card -->
+                        <div class="space-y-2.5">
+                            <button onclick="openPdfModal('menu')" class="w-full py-3 px-4 rounded-full bg-inkaOliveDeep/90 hover:bg-black/40 border border-inkaGold/25 flex items-center justify-between text-left transition">
+                                <span class="text-xs font-rounded font-bold text-inkaGold">✦ Inka Spa Canggu Menu</span>
+                                <span class="text-[11px] text-inkaGoldMuted">PDF Menu →</span>
+                            </button>
+                            <button onclick="openPdfModal('healing')" class="w-full py-3 px-4 rounded-full bg-inkaOliveDeep/90 hover:bg-black/40 border border-inkaGold/25 flex items-center justify-between text-left transition">
+                                <span class="text-xs font-rounded font-bold text-inkaGold">☯ Holistic Healing Session</span>
+                                <span class="text-[11px] text-inkaGoldMuted">Guide →</span>
+                            </button>
+                            <a href="#guest-rewards" class="w-full py-3 px-4 rounded-full bg-inkaGold/15 hover:bg-inkaGold/25 border border-inkaGold/40 flex items-center justify-between text-left transition">
+                                <span class="text-xs font-rounded font-bold text-inkaGold">★ Review &amp; Get Up To 15% Off</span>
+                                <span class="text-[11px] text-inkaGold">Claim →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 3. FEATURE 1: INKA SPA CANGGU MENU (TREATMENTS + PDF VIEWER)          -->
+    <!-- ===================================================================== -->
+    <section id="canggu-menu" class="py-16 sm:py-24 bg-[#4B2E2A] border-b border-inkaGold/15">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <!-- Section Heading -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-inkaGold">Signature Rituals</span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-5xl text-inkaCream mt-1">Inka Spa Canggu Menu</h2>
+                    <p class="text-sm text-inkaCream/75 mt-2 max-w-xl">
+                        Crafted to release deep physical tension and restore natural luminosity using warm botanical infusions.
+                    </p>
+                </div>
+
+                <!-- View PDF Menu Button (Matches "Inka Spa Canggu Menu - PDF Document") -->
+                <button onclick="openPdfModal('menu')"
+                        class="self-start md:self-auto px-5 py-3 rounded-full bg-inkaOlive hover:bg-inkaOliveDeep border border-inkaGold/45 text-inkaGold font-rounded font-extrabold text-xs sm:text-sm flex items-center gap-2.5 shadow-lg transition">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                    </svg>
+                    <span>Open Full Menu (PDF Document)</span>
+                </button>
+            </div>
+
+            <!-- Interactive Category Tabs -->
+            <div class="flex flex-wrap gap-2.5 mb-8">
+                <button onclick="filterTreatments('all', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-rounded font-extrabold bg-inkaGold text-inkaOliveDeep shadow-md transition">
+                    All Rituals
+                </button>
+                <button onclick="filterTreatments('massage', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-rounded font-bold bg-inkaOlive text-inkaGold border border-inkaGold/25 hover:border-inkaGold transition">
+                    Body Massage
+                </button>
+                <button onclick="filterTreatments('face', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-rounded font-bold bg-inkaOlive text-inkaGold border border-inkaGold/25 hover:border-inkaGold transition">
+                    Holistic Face
+                </button>
+                <button onclick="filterTreatments('nails', this)" class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-rounded font-bold bg-inkaOlive text-inkaGold border border-inkaGold/25 hover:border-inkaGold transition">
+                    Beauty &amp; Nails
+                </button>
+            </div>
+
+            <!-- Treatments Grid -->
+            <div id="treatmentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 4. FEATURE 2: HOLISTIC HEALING SESSION                                -->
+    <!-- ===================================================================== -->
+    <section id="holistic-healing" class="py-16 sm:py-24 bg-[#583732] border-b border-inkaGold/15 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <!-- Left Editorial Column -->
+                <div class="lg:col-span-5 space-y-5">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-inkaOlive border border-inkaGold/30 text-inkaGold text-xs font-bold">
+                        <!-- Golden Yin-Yang Icon from Reference -->
+                        <svg viewBox="0 0 48 48" class="w-4 h-4">
+                            <circle cx="24" cy="24" r="21" fill="#E5B84B"/>
+                            <path d="M24,3 A21,21 0 0,1 24,45 A10.5,10.5 0 0,1 24,24 A10.5,10.5 0 0,0 24,3 Z" fill="#382605"/>
+                            <circle cx="24" cy="13.5" r="3.2" fill="#E5B84B"/>
+                            <circle cx="24" cy="34.5" r="3.2" fill="#382605"/>
+                        </svg>
+                        <span>ENERGY &amp; SOUND ALIGNMENT</span>
+                    </div>
+
+                    <h2 class="font-serif font-bold text-3xl sm:text-5xl text-inkaCream leading-tight">
+                        Holistic Healing Session
+                    </h2>
+
+                    <p class="text-sm sm:text-base text-inkaCream/80 leading-relaxed">
+                        Beyond physical relaxation, our private healing rooms in Canggu offer vibrational sound therapy, Usui Reiki energy balancing, and guided somatic breathwork to quiet the mind.
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <button onclick="openPdfModal('healing')"
+                                class="px-5 py-3 rounded-full bg-inkaOlive hover:bg-inkaOliveDeep border border-inkaGold/45 text-inkaGold font-rounded font-extrabold text-xs sm:text-sm flex items-center gap-2 transition">
+                            <span>📄 Holistic Healing Guide (PDF)</span>
+                        </button>
+                        <button onclick="selectTreatmentForBooking('Tibetan Sound Bath & Chakra Alignment (75m) - IDR 550K')"
+                                class="px-5 py-3 rounded-full gold-gradient-btn font-rounded font-extrabold text-xs sm:text-sm">
+                            Book Healing Session
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Healing Modalities Cards -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="p-6 rounded-3xl bg-inkaOlive border border-inkaGold/25 hover:border-inkaGold/55 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-inkaGold font-bold text-sm">01.</span>
+                                <h3 class="font-rounded font-extrabold text-lg text-inkaGold">Tibetan Sound Bath &amp; Chakra Alignment</h3>
+                            </div>
+                            <p class="text-xs sm:text-sm text-inkaCream/75">
+                                75 Mins • Hand-hammered Himalayan singing bowls placed around the body to dissolve stagnant energy and induce deep theta-wave calm.
+                            </p>
+                        </div>
+                        <div class="sm:text-right flex-shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-2">
+                            <span class="font-rounded font-extrabold text-base text-inkaGold">IDR 550K</span>
+                            <button onclick="selectTreatmentForBooking('Tibetan Sound Bath & Chakra Alignment (75m) - IDR 550K')"
+                                    class="px-4 py-1.5 rounded-full bg-inkaGold/15 hover:bg-inkaGold text-inkaGold hover:text-inkaOliveDeep text-xs font-bold transition">
+                                Reserve →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-inkaOlive border border-inkaGold/25 hover:border-inkaGold/55 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-inkaGold font-bold text-sm">02.</span>
+                                <h3 class="font-rounded font-extrabold text-lg text-inkaGold">Usui Reiki &amp; Balinese Aura Cleansing</h3>
+                            </div>
+                            <p class="text-xs sm:text-sm text-inkaCream/75">
+                                60 Mins • Gentle hands-on energetic channeling paired with sacred Balinese incense &amp; floral blessing mist to reset your nervous system.
+                            </p>
+                        </div>
+                        <div class="sm:text-right flex-shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-2">
+                            <span class="font-rounded font-extrabold text-base text-inkaGold">IDR 490K</span>
+                            <button onclick="selectTreatmentForBooking('Usui Reiki & Balinese Aura Cleansing (60m) - IDR 490K')"
+                                    class="px-4 py-1.5 rounded-full bg-inkaGold/15 hover:bg-inkaGold text-inkaGold hover:text-inkaOliveDeep text-xs font-bold transition">
+                                Reserve →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-inkaOlive border border-inkaGold/25 hover:border-inkaGold/55 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-inkaGold font-bold text-sm">03.</span>
+                                <h3 class="font-rounded font-extrabold text-lg text-inkaGold">Sacred Heart Breathwork &amp; Head Acupressure</h3>
+                            </div>
+                            <p class="text-xs sm:text-sm text-inkaCream/75">
+                                90 Mins • Guided somatic breath release followed by warm herbal poultice and intuitive cranial-sacral acupressure.
+                            </p>
+                        </div>
+                        <div class="sm:text-right flex-shrink-0 flex sm:flex-col items-center sm:items-end justify-between gap-2">
+                            <span class="font-rounded font-extrabold text-base text-inkaGold">IDR 680K</span>
+                            <button onclick="selectTreatmentForBooking('Sacred Heart Breathwork & Head Acupressure (90m) - IDR 680K')"
+                                    class="px-4 py-1.5 rounded-full bg-inkaGold/15 hover:bg-inkaGold text-inkaGold hover:text-inkaOliveDeep text-xs font-bold transition">
+                                Reserve →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 5. FEATURE 3: BOOK VIA FRESHA (INTERACTIVE RESERVATION SECTION)       -->
+    <!-- ===================================================================== -->
+    <section id="booking-section" class="py-16 sm:py-24 bg-[#432824] border-b border-inkaGold/15">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="rounded-[2.25rem] bg-inkaOlive border border-inkaGold/35 p-6 sm:p-10 shadow-2xl">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-inkaGold/20">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 rounded-full fresha-orb flex-shrink-0"></div>
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest text-inkaGoldMuted font-bold">Instant Appointment</span>
+                            <h2 class="font-serif font-bold text-2xl sm:text-4xl text-inkaGold">Book Via Fresha</h2>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-inkaOliveDeep border border-inkaGold/25 text-xs text-inkaCream/80">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Instant Confirmation
+                    </span>
+                </div>
+
+                <form id="freshaBookingForm" onsubmit="handleFreshaSubmit(event)" class="space-y-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkaGoldMuted mb-2">Choose Ritual / Treatment</label>
+                            <select id="bookingTreatmentSelect" class="w-full rounded-2xl bg-inkaOliveDeep border border-inkaGold/35 px-4 py-3.5 text-sm text-inkaCream focus:outline-none focus:border-inkaGold">
+                                <option value="Inka Signature Balinese Massage (90m) - IDR 450K">Inka Signature Balinese Massage (90m) — IDR 450K</option>
+                                <option value="Holistic Sculpting Face & Gua Sha (60m) - IDR 420K">Holistic Sculpting Face &amp; Gua Sha (60m) — IDR 420K</option>
+                                <option value="Deep Tissue & Warm Herbal Compress (90m) - IDR 520K">Deep Tissue &amp; Warm Herbal Compress (90m) — IDR 520K</option>
+                                <option value="24K Botanical Glow Facial (75m) - IDR 490K">24K Botanical Glow Facial (75m) — IDR 490K</option>
+                                <option value="Luxury Spa Manicure & Gel Polish (60m) - IDR 320K">Luxury Spa Manicure &amp; Gel Polish (60m) — IDR 320K</option>
+                                <option value="Canggu Coconut Milk Pedicure (75m) - IDR 360K">Canggu Coconut Milk Pedicure (75m) — IDR 360K</option>
+                                <option value="Tibetan Sound Bath & Chakra Alignment (75m) - IDR 550K">Tibetan Sound Bath &amp; Chakra Alignment (75m) — IDR 550K</option>
+                                <option value="Usui Reiki & Balinese Aura Cleansing (60m) - IDR 490K">Usui Reiki &amp; Balinese Aura Cleansing (60m) — IDR 490K</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkaGoldMuted mb-2">Guests &amp; Room Preference</label>
+                            <select id="bookingGuests" class="w-full rounded-2xl bg-inkaOliveDeep border border-inkaGold/35 px-4 py-3.5 text-sm text-inkaCream focus:outline-none focus:border-inkaGold">
+                                <option value="1 Guest (Private Sanctuary Suite)">1 Guest (Private Sanctuary Suite)</option>
+                                <option value="2 Guests (Couples Suite)">2 Guests (Couples Suite)</option>
+                                <option value="3+ Guests (Group Wellness)">3+ Guests (Group Wellness)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkaGoldMuted mb-2">Preferred Date</label>
+                            <input type="date" id="bookingDate" required class="w-full rounded-2xl bg-inkaOliveDeep border border-inkaGold/35 px-4 py-3.5 text-sm text-inkaCream focus:outline-none focus:border-inkaGold">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkaGoldMuted mb-2">Time Slot (WITA)</label>
+                            <select id="bookingTime" class="w-full rounded-2xl bg-inkaOliveDeep border border-inkaGold/35 px-4 py-3.5 text-sm text-inkaCream focus:outline-none focus:border-inkaGold">
+                                <option value="09:30 AM">09:30 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="01:30 PM">01:30 PM</option>
+                                <option value="03:30 PM">03:30 PM</option>
+                                <option value="05:30 PM">05:30 PM</option>
+                                <option value="07:00 PM">07:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-inkaGoldMuted mb-2">Your Full Name</label>
+                            <input type="text" id="bookingName" required placeholder="e.g. Clara Wijaya" class="w-full rounded-2xl bg-inkaOliveDeep border border-inkaGold/35 px-4 py-3.5 text-sm text-inkaCream placeholder-inkaCream/40 focus:outline-none focus:border-inkaGold">
+                        </div>
+                    </div>
+
+                    <!-- Confirmation Result Box -->
+                    <div id="freshaSuccessBox" class="hidden p-5 rounded-2xl bg-emerald-950/85 border border-emerald-400/40 text-emerald-100 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="font-rounded font-extrabold text-base text-emerald-300">✓ Fresha Slot Reserved!</span>
+                            <span class="text-xs font-mono bg-emerald-900 px-2.5 py-1 rounded-full">REF #INKA-882</span>
+                        </div>
+                        <p id="freshaSuccessDetails" class="text-xs sm:text-sm text-emerald-100/90"></p>
+                        <div class="pt-1">
+                            <button type="button" onclick="sendBookingToWhatsApp()" class="text-xs font-bold underline text-inkaGold hover:text-white">
+                                Also send confirmation copy via WhatsApp →
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <span class="text-xs text-inkaCream/70">No prepayment required • Free rescheduling up to 2 hours prior</span>
+                        <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#6B57F5] to-[#8C7BFF] hover:opacity-95 text-white font-rounded font-extrabold text-sm sm:text-base shadow-xl transition">
+                            Complete Fresha Booking
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 6. FEATURE 4: VIP GUEST REWARD — GOOGLE MAP & TRIPADVISOR 15% OFF     -->
+    <!-- ===================================================================== -->
+    <section id="guest-rewards" class="py-16 sm:py-24 bg-[#583732] border-b border-inkaGold/15">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="inline-block px-4 py-1 rounded-full bg-inkaOlive border border-inkaGold/35 text-inkaGold text-xs font-extrabold tracking-widest uppercase">
+                    Exclusive Guest Privilege
+                </span>
+                <h2 class="font-serif font-bold text-3xl sm:text-5xl text-inkaCream">
+                    Leave A Review. Show It &amp; <span class="text-inkaGold">GET UP TO 15%</span>
+                </h2>
+                <p class="text-sm text-inkaCream/80">
+                    Loved your massage, facial, or nail ritual at Inka Spa Canggu? Share your experience on Google Maps or Tripadvisor and show it at our reception desk for up to 15% off!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1: Google Map Review -->
+                <div class="rounded-3xl bg-inkaOlive border border-inkaGold/30 p-7 flex flex-col justify-between gap-6 shadow-xl hover:border-inkaGold/60 transition">
+                    <div class="flex items-start gap-4">
+                        <!-- Google Multi-Color G Logo -->
+                        <div class="w-12 h-12 rounded-2xl bg-inkaOliveDeep border border-inkaGold/20 flex items-center justify-center flex-shrink-0">
+                            <svg viewBox="0 0 48 48" class="w-7 h-7">
+                                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-rounded font-extrabold text-lg text-inkaGold">Leave A Review On Google Map</h3>
+                            <p class="text-xs sm:text-sm text-inkaCream/75 mt-1">
+                                Rate your visit on Google Maps &amp; present your review screen at check-out to unlock up to 15% discount.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="openRewardPassModal('Google Maps')"
+                            class="w-full py-3.5 rounded-full gold-gradient-btn font-rounded font-extrabold text-sm">
+                        Claim Google Map 15% Pass →
+                    </button>
+                </div>
+
+                <!-- Card 2: Tripadvisor Review -->
+                <div class="rounded-3xl bg-inkaOlive border border-inkaGold/30 p-7 flex flex-col justify-between gap-6 shadow-xl hover:border-inkaGold/60 transition">
+                    <div class="flex items-start gap-4">
+                        <!-- Tripadvisor Owl SVG -->
+                        <div class="w-12 h-12 rounded-2xl bg-inkaOliveDeep border border-inkaGold/20 flex items-center justify-center flex-shrink-0">
+                            <svg viewBox="0 0 48 48" class="w-8 h-8">
+                                <circle cx="24" cy="24" r="22" fill="#34E0A1"/>
+                                <path d="M11 19.5c4.5-2.8 9.2-3.5 13-3.5s8.5.7 13 3.5" fill="none" stroke="#111111" stroke-width="2.4" stroke-linecap="round"/>
+                                <circle cx="17.5" cy="25.5" r="5.8" fill="#FFFFFF" stroke="#111111" stroke-width="2.2"/>
+                                <circle cx="30.5" cy="25.5" r="5.8" fill="#FFFFFF" stroke="#111111" stroke-width="2.2"/>
+                                <circle cx="17.5" cy="25.5" r="2.3" fill="#111111"/>
+                                <circle cx="30.5" cy="25.5" r="2.3" fill="#111111"/>
+                                <polygon points="24,27 21.8,31.2 26.2,31.2" fill="#111111"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-rounded font-extrabold text-lg text-inkaGold">Leave A Review On Tripadvisor</h3>
+                            <p class="text-xs sm:text-sm text-inkaCream/75 mt-1">
+                                Share your holistic spa story on Tripadvisor &amp; show it at reception for up to 15% off your treatment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="openRewardPassModal('Tripadvisor')"
+                            class="w-full py-3.5 rounded-full gold-gradient-btn font-rounded font-extrabold text-sm">
+                        Claim Tripadvisor 15% Pass →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 7. FEATURE 5 & 6: ARE YOU LOST? (LOCATION) & WHATSAPP CONCIERGE       -->
+    <!-- ===================================================================== -->
+    <section id="location" class="py-16 sm:py-24 bg-[#472B27]">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Left: Are You Lost? Location Card -->
+            <div class="lg:col-span-7 rounded-3xl bg-inkaOlive border border-inkaGold/30 p-7 sm:p-9 flex flex-col justify-between gap-6 shadow-xl">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <!-- Google Maps Pin Icon -->
+                        <svg viewBox="0 0 48 48" class="w-9 h-9 flex-shrink-0">
+                            <path fill="#1A73E8" d="M24 5c-4.2 0-8.1 1.6-11 4.3l6.6 5.5c1.1-1.2 2.7-1.9 4.4-1.9 3.4 0 6.1 2.7 6.1 6.1 0 1.4-.5 2.7-1.3 3.7l6.6 5.5c2.1-2.5 3.4-5.7 3.4-9.2C38.8 11.3 32.2 5 24 5z"/>
+                            <path fill="#EA4335" d="M13 9.3C10.6 11.9 9.2 15.3 9.2 19c0 3.5 1.3 6.7 3.4 9.2l7-5.5c-.8-1-1.3-2.3-1.3-3.7 0-1.6.6-3.1 1.6-4.2L13 9.3z"/>
+                            <path fill="#FBBC04" d="M12.6 28.2c2.2 2.7 5.2 5.9 7.8 9.8l7.3-8.8c-1.1.8-2.4 1.3-3.7 1.3-2.2 0-4.1-1.1-5.2-2.8l-6.2.5z"/>
+                            <path fill="#34A853" d="M24 43.5c.9 0 1.6-.6 1.9-1.4 1.7-4.5 5.4-8.8 9.5-13.9l-6.6-5.5c-1.1 1.4-2.8 2.4-4.8 2.4l-3.6 12.9c1.2 1.8 2.2 3.6 2.8 4.8.2.4.5.7.8.7z"/>
+                            <circle cx="24" cy="19" r="4.2" fill="#382605"/>
+                        </svg>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-inkaGoldMuted">Directions &amp; Map</span>
+                            <h2 class="font-serif font-bold text-3xl text-inkaCream">Are You Lost?</h2>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-inkaCream/80 leading-relaxed">
+                        Find our tranquil sanctuary in the heart of Canggu. Complimentary ginger-lemongrass welcome tea awaits upon your arrival.
+                    </p>
+
+                    <!-- Stylized Canggu Sanctuary Map Card -->
+                    <div class="relative rounded-2xl bg-inkaOliveDeep border border-inkaGold/25 p-5 overflow-hidden">
+                        <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#E5B84B 1.2px, transparent 1.2px); background-size: 18px 18px;"></div>
+                        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+                            <div>
+                                <span class="block text-inkaGoldMuted font-bold uppercase text-[10px] tracking-wider">Sanctuary Address</span>
+                                <span class="font-semibold text-inkaCream mt-0.5 block">Jl. Pantai Batu Bolong, Canggu, Kec. Kuta Utara, Bali 80361</span>
+                            </div>
+                            <div>
+                                <span class="block text-inkaGoldMuted font-bold uppercase text-[10px] tracking-wider">Opening Hours</span>
+                                <span class="font-semibold text-inkaCream mt-0.5 block">Every Day • 09:00 AM – 09:00 PM WITA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://maps.google.com/?q=Inka+Spa+Canggu+Bali" target="_blank" rel="noopener noreferrer"
+                       class="flex-1 min-w-[200px] py-3.5 px-6 rounded-full gold-gradient-btn font-rounded font-extrabold text-sm text-center">
+                        Open Google Maps Navigation ↗
+                    </a>
+                    <button onclick="copyToClipboard('Inka Spa Canggu - Jl. Pantai Batu Bolong, Canggu, Bali')"
+                            class="py-3.5 px-5 rounded-full bg-inkaOliveDeep hover:bg-black/40 border border-inkaGold/35 text-inkaGold font-rounded font-bold text-xs sm:text-sm transition">
+                        Copy Address
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: WhatsApp Concierge & Share Card -->
+            <div class="lg:col-span-5 rounded-3xl bg-inkaOlive border border-inkaGold/30 p-7 sm:p-9 flex flex-col justify-between gap-6 shadow-xl">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <svg viewBox="0 0 48 48" class="w-9 h-9 flex-shrink-0">
+                            <path fill="#25D366" d="M24.5 4C13.2 4 4 13.1 4 24.3c0 3.6.9 7.1 2.7 10.2L4 44l9.8-2.6c3 1.6 6.3 2.5 9.7 2.5h.1c11.3 0 20.4-9.1 20.4-20.3C44 13.1 35.8 4 24.5 4zm0 36.5c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-5.8 1.5 1.6-5.6-.4-.6c-1.7-2.7-2.6-5.8-2.6-9 0-9.3 7.6-16.9 16.9-16.9 9.3 0 16.9 7.6 16.9 16.9 0 9.3-7.6 16.5-17.3 16.5z"/>
+                            <path fill="#25D366" d="M33.8 28.4c-.5-.3-3-1.5-3.5-1.6-.5-.2-.8-.3-1.1.3-.3.5-1.3 1.6-1.6 2-.3.3-.6.4-1.1.1-.5-.3-2.1-.8-4.1-2.5-1.5-1.3-2.5-3-2.8-3.5-.3-.5 0-.8.2-1 .2-.2.5-.6.8-.9.3-.3.3-.5.5-.8.2-.3.1-.6 0-.9-.1-.3-1.1-2.7-1.5-3.7-.4-1-.8-.8-1.1-.8h-1c-.3 0-.9.1-1.4.6-.5.5-1.8 1.8-1.8 4.3s1.8 5 2.1 5.3c.3.3 3.6 5.5 8.7 7.7 1.2.5 2.2.8 2.9 1.1 1.2.4 2.3.3 3.2.2 1-.1 3-1.2 3.4-2.4.4-1.2.4-2.2.3-2.4-.1-.2-.5-.3-1-.6z"/>
+                        </svg>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-inkaGoldMuted">Direct Concierge</span>
+                            <h2 class="font-serif font-bold text-3xl text-inkaCream">WhatsApp Us</h2>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-inkaCream/80 leading-relaxed">
+                        Need same-day couples suite availability, custom wellness packages, or want to share @InkaSpaBali with a friend?
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <button onclick="openWhatsAppModal('Halo Inka Spa Bali! Saya ingin menanyakan jadwal treatment hari ini di Canggu.')"
+                            class="w-full py-3.5 px-6 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-[#111] font-rounded font-extrabold text-sm transition shadow-lg">
+                        Chat Reception on WhatsApp
+                    </button>
+
+                    <button onclick="shareInkaSpaWhatsApp()"
+                            class="w-full py-3.5 px-6 rounded-full bg-inkaOliveDeep hover:bg-black/40 border border-inkaGold/35 text-inkaGold font-rounded font-bold text-sm transition">
+                        Share on WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- 8. FOOTER                                                             -->
+    <!-- ===================================================================== -->
+    <footer class="bg-inkaOliveDeep border-t border-inkaGold/20 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12">
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <circle cx="100" cy="100" r="97" fill="#2A1C03" stroke="#1A1102" stroke-width="2"/>
+                        <circle cx="100" cy="100" r="91" fill="#382605" stroke="#D4A437" stroke-width="3.2"/>
+                        <circle cx="100" cy="100" r="65" fill="#382605" stroke="#D4A437" stroke-width="1.6"/>
+                        <text x="100" y="93" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">INKA</text>
+                        <text x="100" y="121" text-anchor="middle" fill="#D4A437" font-family="Nunito, sans-serif" font-weight="900" font-size="27" letter-spacing="1.5">SPA</text>
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-rounded font-extrabold text-lg text-inkaGold">INKA SPA (@InkaSpaBali)</div>
+                    <div class="text-xs text-inkaCream/65">Holistic Face &amp; Body Massage • Beauty &amp; Nails</div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-5 text-xs text-inkaGoldMuted">
+                <button onclick="openPdfModal('menu')" class="hover:text-inkaGold">Canggu Menu (PDF)</button>
+                <button onclick="openPdfModal('healing')" class="hover:text-inkaGold">Holistic Healing (PDF)</button>
+                <a href="#booking-section" class="hover:text-inkaGold">Book Via Fresha</a>
+                <a href="#guest-rewards" class="hover:text-inkaGold">15% Review Reward</a>
+            </div>
+
+            <div class="text-xs text-inkaCream/55 text-center md:text-right">
+                © 2026 Inka Spa Bali • Canggu, Bali
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Concierge Button -->
+    <button onclick="openWhatsAppModal('Halo Inka Spa Bali! Saya ingin reservasi treatment.')"
+            aria-label="Floating WhatsApp Concierge"
+            class="fixed bottom-5 right-5 z-30 w-14 h-14 rounded-full bg-inkaOlive border-2 border-[#25D366] shadow-2xl flex items-center justify-center hover:scale-105 transition">
+        <svg viewBox="0 0 48 48" class="w-7 h-7">
+            <path fill="#25D366" d="M24.5 4C13.2 4 4 13.1 4 24.3c0 3.6.9 7.1 2.7 10.2L4 44l9.8-2.6c3 1.6 6.3 2.5 9.7 2.5h.1c11.3 0 20.4-9.1 20.4-20.3C44 13.1 35.8 4 24.5 4zm0 36.5c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-5.8 1.5 1.6-5.6-.4-.6c-1.7-2.7-2.6-5.8-2.6-9 0-9.3 7.6-16.9 16.9-16.9 9.3 0 16.9 7.6 16.9 16.9 0 9.3-7.6 16.5-17.3 16.5z"/>
+            <path fill="#25D366" d="M33.8 28.4c-.5-.3-3-1.5-3.5-1.6-.5-.2-.8-.3-1.1.3-.3.5-1.3 1.6-1.6 2-.3.3-.6.4-1.1.1-.5-.3-2.1-.8-4.1-2.5-1.5-1.3-2.5-3-2.8-3.5-.3-.5 0-.8.2-1 .2-.2.5-.6.8-.9.3-.3.3-.5.5-.8.2-.3.1-.6 0-.9-.1-.3-1.1-2.7-1.5-3.7-.4-1-.8-.8-1.1-.8h-1c-.3 0-.9.1-1.4.6-.5.5-1.8 1.8-1.8 4.3s1.8 5 2.1 5.3c.3.3 3.6 5.5 8.7 7.7 1.2.5 2.2.8 2.9 1.1 1.2.4 2.3.3 3.2.2 1-.1 3-1.2 3.4-2.4.4-1.2.4-2.2.3-2.4-.1-.2-.5-.3-1-.6z"/>
+        </svg>
+    </button>
+
+    <!-- ===================================================================== -->
+    <!-- INTERACTIVE MODALS (PDF DOCUMENT VIEWERS, VIP REWARD PASS, WHATSAPP)  -->
+    <!-- ===================================================================== -->
+    <div id="modalBackdrop" onclick="closeModals()" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden"></div>
+
+    <!-- MODAL A: PDF DOCUMENT VIEWER (Canggu Menu & Holistic Healing Session) -->
+    <div id="pdfViewerModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="modal-animate pointer-events-auto w-full max-w-2xl bg-inkaOliveDeep border border-inkaGold/40 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[88vh]">
+            <div class="px-6 py-4 bg-inkaOlive border-b border-inkaGold/25 flex items-center justify-between">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-inkaGoldMuted font-bold">PDF • Official Document</span>
+                    <h3 id="pdfModalTitle" class="font-serif font-bold text-2xl text-inkaGold">Inka Spa Canggu Menu</h3>
+                </div>
+                <button onclick="closeModals()" class="w-9 h-9 rounded-full bg-white/5 hover:bg-white/10 text-inkaGold flex items-center justify-center">✕</button>
+            </div>
+
+            <div id="pdfModalContent" class="p-6 overflow-y-auto space-y-4 text-sm text-inkaCream/85">
+                <!-- Populated via JS -->
+            </div>
+
+            <div class="px-6 py-4 bg-inkaOlive border-t border-inkaGold/25 flex items-center justify-between gap-3">
+                <button onclick="window.print()" class="px-4 py-2 rounded-full bg-inkaOliveDeep border border-inkaGold/35 text-inkaGold text-xs font-bold hover:bg-black/40">
+                    🖨 Print / Save PDF
+                </button>
+                <a href="#booking-section" onclick="closeModals()" class="px-6 py-2.5 rounded-full gold-gradient-btn font-rounded font-extrabold text-xs sm:text-sm">
+                    Book Now via Fresha →
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL B: 15% REVIEW REWARD DIGITAL PASS -->
+    <div id="rewardPassModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="modal-animate pointer-events-auto w-full max-w-md bg-inkaOliveDeep border border-inkaGold/45 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="px-6 py-4 bg-inkaOlive border-b border-inkaGold/25 flex items-center justify-between">
+                <h3 id="rewardPlatformHeading" class="font-rounded font-extrabold text-lg text-inkaGold">15% VIP Review Pass</h3>
+                <button onclick="closeModals()" class="w-9 h-9 rounded-full bg-white/5 text-inkaGold flex items-center justify-center">✕</button>
+            </div>
+            <div class="p-6 text-center space-y-4">
+                <span class="inline-block px-4 py-1 rounded-full bg-inkaGold/20 border border-inkaGold/40 text-inkaGold font-rounded font-extrabold text-xs">
+                    SHOW AT RECEPTION • GET UP TO 15% OFF
+                </span>
+                <p id="rewardPlatformBody" class="text-xs sm:text-sm text-inkaCream/85 leading-relaxed"></p>
+
+                <div class="p-4 rounded-2xl bg-inkaOlive border border-dashed border-inkaGold/50 space-y-1">
+                    <span class="text-[10px] uppercase tracking-widest text-inkaGoldMuted block">Digital Reception Pass</span>
+                    <span class="font-rounded font-black text-2xl tracking-widest text-inkaGold block">INKA-VIP15</span>
+                    <button onclick="copyToClipboard('INKA-VIP15')" class="text-xs text-inkaGold underline pt-1">Copy Voucher Code</button>
+                </div>
+
+                <a id="rewardPlatformLink" href="https://maps.google.com/?q=Inka+Spa+Canggu+Bali" target="_blank" rel="noopener noreferrer"
+                   class="block w-full py-3.5 rounded-full gold-gradient-btn font-rounded font-extrabold text-sm">
+                    Leave Review Now ↗
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL C: WHATSAPP CONCIERGE -->
+    <div id="whatsappModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 pointer-events-none">
+        <div class="modal-animate pointer-events-auto w-full max-w-md bg-inkaOliveDeep border border-inkaGold/40 rounded-3xl shadow-2xl overflow-hidden">
+            <div class="px-6 py-4 bg-inkaOlive border-b border-inkaGold/25 flex items-center justify-between">
+                <h3 class="font-rounded font-extrabold text-lg text-inkaGold">WhatsApp Concierge</h3>
+                <button onclick="closeModals()" class="w-9 h-9 rounded-full bg-white/5 text-inkaGold flex items-center justify-center">✕</button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-xs sm:text-sm text-inkaCream/85">
+                    Kirim pesan langsung ke tim resepsionis <strong>Inka Spa Canggu (@InkaSpaBali)</strong>:
+                </p>
+                <textarea id="waMessageInput" rows="3" class="w-full rounded-2xl bg-inkaOlive border border-inkaGold/35 p-3.5 text-xs sm:text-sm text-inkaCream focus:outline-none focus:border-inkaGold"></textarea>
+                <button onclick="executeWhatsAppRedirect()" class="w-full py-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-[#111] font-rounded font-extrabold text-sm shadow-lg transition">
+                    Send via WhatsApp ↗
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Banner -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-inkaOlive border border-inkaGold text-inkaGold px-5 py-2.5 rounded-full shadow-2xl font-rounded font-bold text-xs">
+        Copied!
+    </div>
+
+    <script>
+        // Spa Treatments Data
+        const treatmentsData = [
+            {
+                category: 'massage',
+                title: 'Inka Signature Balinese Massage',
+                duration: '90 Mins',
+                price: 'IDR 450K',
+                tag: 'Most Loved',
+                desc: 'Traditional Balinese rhythmic strokes, acupressure, and warm organic frangipani oil to melt away jet lag and muscle tension.'
+            },
+            {
+                category: 'massage',
+                title: 'Deep Tissue & Warm Herbal Compress',
+                duration: '90 Mins',
+                price: 'IDR 520K',
+                tag: 'Muscle Relief',
+                desc: 'Targeted deep-pressure bodywork paired with steamed lemongrass, ginger & clove herbal poultices.'
+            },
+            {
+                category: 'face',
+                title: 'Holistic Sculpting Face & Gua Sha',
+                duration: '60 Mins',
+                price: 'IDR 420K',
+                tag: 'Signature Face',
+                desc: 'Buccal & lymphatic drainage facial sculpting with rose quartz Gua Sha for an instant natural lift and radiant glow.'
+            },
+            {
+                category: 'face',
+                title: '24K Botanical Glow Facial',
+                duration: '75 Mins',
+                price: 'IDR 490K',
+                tag: 'Hydrating',
+                desc: 'Deep cellular hydration ritual featuring cold-pressed Balinese botanicals, jade roller massage, and soothing mask.'
+            },
+            {
+                category: 'nails',
+                title: 'Luxury Spa Manicure & Gel Polish',
+                duration: '60 Mins',
+                price: 'IDR 320K',
+                tag: 'Beauty & Nails',
+                desc: 'Precision cuticle care, sea-salt hand exfoliation, nourishing shea mask, and long-lasting glossy gel finish.'
+            },
+            {
+                category: 'nails',
+                title: 'Canggu Coconut Milk Pedicure',
+                duration: '75 Mins',
+                price: 'IDR 360K',
+                tag: 'Beauty & Nails',
+                desc: 'Warm coconut milk & lime foot soak, gentle callus buffing, reflexology foot massage, and nail polish.'
+            }
+        ];
+
+        function renderTreatments(category = 'all') {
+            const grid = document.getElementById('treatmentsGrid');
+            const items = category === 'all' ? treatmentsData : treatmentsData.filter(t => t.category === category);
+
+            grid.innerHTML = items.map(item => `
+                <div class="rounded-3xl bg-inkaOlive border border-inkaGold/25 hover:border-inkaGold/60 p-6 flex flex-col justify-between gap-5 shadow-lg transition duration-300 hover:-translate-y-1">
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-3 py-1 rounded-full bg-inkaOliveDeep border border-inkaGold/25 text-[11px] font-bold text-inkaGold">${item.tag}</span>
+                            <span class="text-xs font-semibold text-inkaGoldMuted">${item.duration}</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-2xl text-inkaCream leading-snug">${item.title}</h3>
+                        <p class="text-xs sm:text-sm text-inkaCream/75 leading-relaxed">${item.desc}</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-inkaGold/15 flex items-center justify-between">
+                        <div>
+                            <span class="block text-[10px] uppercase text-inkaGoldMuted">Treatment Price</span>
+                            <span class="font-rounded font-extrabold text-lg text-inkaGold">${item.price}</span>
+                        </div>
+                        <button onclick="selectTreatmentForBooking('${item.title} (${item.duration}) - ${item.price}')"
+                                class="px-4 py-2.5 rounded-full gold-gradient-btn font-rounded font-extrabold text-xs">
+                            Book Ritual →
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterTreatments(category, btnElement) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-inkaGold', 'text-inkaOliveDeep', 'shadow-md');
+                btn.classList.add('bg-inkaOlive', 'text-inkaGold', 'border', 'border-inkaGold/25');
+            });
+            btnElement.classList.remove('bg-inkaOlive', 'text-inkaGold', 'border', 'border-inkaGold/25');
+            btnElement.classList.add('bg-inkaGold', 'text-inkaOliveDeep', 'shadow-md');
+            renderTreatments(category);
+        }
+
+        function selectTreatmentForBooking(label) {
+            const select = document.getElementById('bookingTreatmentSelect');
+            let found = false;
+            for (let i = 0; i < select.options.length; i++) {
+                if (select.options[i].value.includes(label.split('(')[0].trim())) {
+                    select.selectedIndex = i;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                const opt = document.createElement('option');
+                opt.value = label;
+                opt.text = label;
+                select.add(opt, 0);
+                select.selectedIndex = 0;
+            }
+            document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // PDF Document Viewer Modal
+        function openPdfModal(docType) {
+            const title = document.getElementById('pdfModalTitle');
+            const content = document.getElementById('pdfModalContent');
+
+            if (docType === 'menu') {
+                title.textContent = 'Inka Spa Canggu Menu (PDF)';
+                content.innerHTML = `
+                    <div class="p-4 rounded-2xl bg-inkaOlive border border-inkaGold/20 text-center space-y-1">
+                        <div class="font-rounded font-extrabold text-inkaGold text-base">INKA SPA BALI — CANGGU</div>
+                        <div class="text-xs text-inkaGoldMuted">Holistic Face & Body Massage • Beauty & Nails</div>
+                    </div>
+                    ${treatmentsData.map(t => `
+                        <div class="flex justify-between items-start gap-4 pb-3 border-b border-inkaGold/15">
+                            <div>
+                                <div class="font-rounded font-extrabold text-inkaGold">${t.title} <span class="text-xs font-normal text-inkaGoldMuted">(${t.duration})</span></div>
+                                <div class="text-xs text-inkaCream/75 mt-0.5">${t.desc}</div>
+                            </div>
+                            <div class="font-rounded font-extrabold text-inkaGold whitespace-nowrap">${t.price}</div>
+                        </div>
+                    `).join('')}
+                `;
+            } else {
+                title.textContent = 'Holistic Healing Session Guide (PDF)';
+                content.innerHTML = `
+                    <div class="p-4 rounded-2xl bg-inkaOlive border border-inkaGold/20 text-center space-y-1">
+                        <div class="font-rounded font-extrabold text-inkaGold text-base">HOLISTIC HEALING SANCTUARY</div>
+                        <div class="text-xs text-inkaGoldMuted">Vibrational Sound, Reiki & Breathwork</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="pb-3 border-b border-inkaGold/15 flex justify-between gap-4">
+                            <div>
+                                <div class="font-rounded font-extrabold text-inkaGold">Tibetan Sound Bath & Chakra Alignment (75 Mins)</div>
+                                <div class="text-xs text-inkaCream/75 mt-1">Deep cellular resonance with Himalayan bowls to clear energetic blockages.</div>
+                            </div>
+                            <div class="font-rounded font-extrabold text-inkaGold whitespace-nowrap">IDR 550K</div>
+                        </div>
+                        <div class="pb-3 border-b border-inkaGold/15 flex justify-between gap-4">
+                            <div>
+                                <div class="font-rounded font-extrabold text-inkaGold">Usui Reiki & Balinese Aura Cleansing (60 Mins)</div>
+                                <div class="text-xs text-inkaCream/75 mt-1">Gentle energy channeling with sacred incense and floral mist.</div>
+                            </div>
+                            <div class="font-rounded font-extrabold text-inkaGold whitespace-nowrap">IDR 490K</div>
+                        </div>
+                        <div class="pb-3 border-b border-inkaGold/15 flex justify-between gap-4">
+                            <div>
+                                <div class="font-rounded font-extrabold text-inkaGold">Sacred Heart Breathwork & Head Acupressure (90 Mins)</div>
+                                <div class="text-xs text-inkaCream/75 mt-1">Guided somatic breathwork paired with warm herbal compress.</div>
+                            </div>
+                            <div class="font-rounded font-extrabold text-inkaGold whitespace-nowrap">IDR 680K</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            openModalById('pdfViewerModal');
+        }
+
+        // 15% VIP Reward Pass Modal
+        function openRewardPassModal(platform) {
+            document.getElementById('rewardPlatformHeading').textContent = `${platform} • 15% VIP Pass`;
+            document.getElementById('rewardPlatformBody').innerHTML = `Leave a review for <strong>Inka Spa Canggu (@InkaSpaBali)</strong> on <strong>${platform}</strong>. Show your published review and pass code below at reception to receive <strong>UP TO 15% OFF</strong>!`;
+            const link = document.getElementById('rewardPlatformLink');
+            link.href = platform === 'Google Maps' ? 'https://maps.google.com/?q=Inka+Spa+Canggu+Bali' : 'https://www.tripadvisor.com/';
+            link.textContent = `Open ${platform} to Review ↗`;
+            openModalById('rewardPassModal');
+        }
+
+        // WhatsApp Modal
+        function openWhatsAppModal(defaultMsg) {
+            document.getElementById('waMessageInput').value = defaultMsg;
+            openModalById('whatsappModal');
+        }
+
+        function executeWhatsAppRedirect() {
+            const msg = encodeURIComponent(document.getElementById('waMessageInput').value);
+            window.open(`https://wa.me/6281234567890?text=${msg}`, '_blank');
+        }
+
+        function shareInkaSpaWhatsApp() {
+            const text = encodeURIComponent('Discover Inka Spa Bali (@InkaSpaBali) in Canggu — Holistic Face & Body Massage, Beauty & Nails: ' + window.location.href);
+            window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+        }
+
+        // Fresha Booking Form
+        let lastBookingSummary = '';
+        function handleFreshaSubmit(e) {
+            e.preventDefault();
+            const treatment = document.getElementById('bookingTreatmentSelect').value;
+            const guests = document.getElementById('bookingGuests').value;
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const name = document.getElementById('bookingName').value;
+
+            lastBookingSummary = `Halo Inka Spa Bali! Saya ${name} telah memesan via Fresha: ${treatment}, ${guests}, tanggal ${date} pukul ${time} WITA.`;
+            document.getElementById('freshaSuccessDetails').textContent = `${name} • ${treatment} (${guests}) on ${date} at ${time} WITA.`;
+            document.getElementById('freshaSuccessBox').classList.remove('hidden');
+            showToast('Fresha appointment slot reserved!');
+        }
+
+        function sendBookingToWhatsApp() {
+            window.open(`https://wa.me/6281234567890?text=${encodeURIComponent(lastBookingSummary)}`, '_blank');
+        }
+
+        // Modal Helpers
+        function openModalById(id) {
+            closeModals();
+            document.getElementById('modalBackdrop').classList.remove('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModals() {
+            document.getElementById('modalBackdrop').classList.add('hidden');
+            ['pdfViewerModal', 'rewardPassModal', 'whatsappModal'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+        }
+
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            showToast('Copied: ' + text);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.remove('hidden');
+            setTimeout(() => toast.classList.add('hidden'), 2500);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderTreatments('all');
+            document.getElementById('bookingDate').value = new Date().toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html>
